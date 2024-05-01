@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A407F222BE2817C0018F756 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A407F212BE2817C0018F756 /* ImageLoader.swift */; };
+		1A407F252BE282310018F756 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A407F242BE282310018F756 /* ImagePrefetcher.swift */; };
+		1A407F292BE284210018F756 /* KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A407F282BE284210018F756 /* KingFisher.swift */; };
+		1A407F2C2BE284320018F756 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1A407F2B2BE284320018F756 /* Kingfisher */; };
 		1AA93E922BCD2646008481DE /* ThinkingSPM_SDKsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93E912BCD2646008481DE /* ThinkingSPM_SDKsApp.swift */; };
 		1AA93E942BCD2646008481DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA93E932BCD2646008481DE /* ContentView.swift */; };
 		1AA93E962BCD2647008481DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA93E952BCD2647008481DE /* Assets.xcassets */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A407F212BE2817C0018F756 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		1A407F242BE282310018F756 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
+		1A407F282BE284210018F756 /* KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisher.swift; sourceTree = "<group>"; };
 		1AA93E8E2BCD2646008481DE /* ThinkingSPM&SDKs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ThinkingSPM&SDKs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA93E912BCD2646008481DE /* ThinkingSPM_SDKsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkingSPM_SDKsApp.swift; sourceTree = "<group>"; };
 		1AA93E932BCD2646008481DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A407F2C2BE284320018F756 /* Kingfisher in Frameworks */,
 				1AA93EA12BCD278A008481DE /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +44,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A407F202BE281600018F756 /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				1A407F262BE283D70018F756 /* Generic */,
+				1A407F272BE283DC0018F756 /* SPMs */,
+			);
+			path = ImageLoading;
+			sourceTree = "<group>";
+		};
+		1A407F262BE283D70018F756 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				1A407F242BE282310018F756 /* ImagePrefetcher.swift */,
+				1A407F212BE2817C0018F756 /* ImageLoader.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		1A407F272BE283DC0018F756 /* SPMs */ = {
+			isa = PBXGroup;
+			children = (
+				1AA93EA22BCD2CE0008481DE /* SDWebImage.swift */,
+				1A407F282BE284210018F756 /* KingFisher.swift */,
+			);
+			path = SPMs;
+			sourceTree = "<group>";
+		};
 		1AA93E852BCD2646008481DE = {
 			isa = PBXGroup;
 			children = (
@@ -55,9 +90,9 @@
 		1AA93E902BCD2646008481DE /* ThinkingSPM&SDKs */ = {
 			isa = PBXGroup;
 			children = (
-				1AA93EA22BCD2CE0008481DE /* SDWebImage.swift */,
-				1AA93E912BCD2646008481DE /* ThinkingSPM_SDKsApp.swift */,
+				1A407F202BE281600018F756 /* ImageLoading */,
 				1AA93E932BCD2646008481DE /* ContentView.swift */,
+				1AA93E912BCD2646008481DE /* ThinkingSPM_SDKsApp.swift */,
 				1AA93E952BCD2647008481DE /* Assets.xcassets */,
 				1AA93E972BCD2647008481DE /* Preview Content */,
 			);
@@ -90,6 +125,7 @@
 			name = "ThinkingSPM&SDKs";
 			packageProductDependencies = (
 				1AA93EA02BCD278A008481DE /* SDWebImageSwiftUI */,
+				1A407F2B2BE284320018F756 /* Kingfisher */,
 			);
 			productName = "ThinkingSPM&SDKs";
 			productReference = 1AA93E8E2BCD2646008481DE /* ThinkingSPM&SDKs.app */;
@@ -121,6 +157,7 @@
 			mainGroup = 1AA93E852BCD2646008481DE;
 			packageReferences = (
 				1AA93E9F2BCD278A008481DE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				1A407F2A2BE284320018F756 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1AA93E8F2BCD2646008481DE /* Products */;
 			projectDirPath = "";
@@ -149,7 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA93E942BCD2646008481DE /* ContentView.swift in Sources */,
+				1A407F292BE284210018F756 /* KingFisher.swift in Sources */,
 				1AA93E922BCD2646008481DE /* ThinkingSPM_SDKsApp.swift in Sources */,
+				1A407F222BE2817C0018F756 /* ImageLoader.swift in Sources */,
+				1A407F252BE282310018F756 /* ImagePrefetcher.swift in Sources */,
 				1AA93EA32BCD2CE0008481DE /* SDWebImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +398,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1A407F2A2BE284320018F756 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		1AA93E9F2BCD278A008481DE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -369,6 +417,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1A407F2B2BE284320018F756 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A407F2A2BE284320018F756 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		1AA93EA02BCD278A008481DE /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1AA93E9F2BCD278A008481DE /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;

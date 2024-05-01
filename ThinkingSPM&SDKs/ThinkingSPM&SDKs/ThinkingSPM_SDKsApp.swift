@@ -11,7 +11,8 @@ import SwiftUI
 struct ThinkingSPM_SDKsApp: App {
     var body: some Scene {
         WindowGroup {
-            SDWebImage()
+           // KingFisher()
+            Text("hi")
         }
     }
 }
